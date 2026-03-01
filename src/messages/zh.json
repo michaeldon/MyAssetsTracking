@@ -1,0 +1,129 @@
+{
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "sync": "同步",
+    "syncAll": "全部同步",
+    "loading": "加载中...",
+    "confirmDelete": "确定要删除此项吗？",
+    "noData": "暂无数据",
+    "actions": "操作",
+    "currency": "币种",
+    "value": "价值",
+    "name": "名称",
+    "notes": "备注",
+    "createdAt": "创建时间",
+    "updatedAt": "更新时间"
+  },
+  "nav": {
+    "dashboard": "仪表盘",
+    "crypto": "加密钱包",
+    "exchanges": "交易所",
+    "banks": "银行账户",
+    "realEstate": "房地产",
+    "otherAssets": "其他资产",
+    "settings": "设置"
+  },
+  "dashboard": {
+    "title": "资产仪表盘",
+    "totalNetWorth": "总资产",
+    "todayChange": "今日变动",
+    "categoryBreakdown": "资产配置",
+    "trend": "资产趋势",
+    "exchangeRate": "实时汇率",
+    "period": {
+      "7d": "7天",
+      "30d": "30天",
+      "90d": "90天",
+      "1y": "1年",
+      "all": "全部"
+    },
+    "categories": {
+      "crypto": "加密货币",
+      "exchange": "交易所",
+      "bank": "银行",
+      "realEstate": "房地产",
+      "other": "其他"
+    },
+    "snapshot": "生成快照",
+    "snapshotSuccess": "快照创建成功"
+  },
+  "crypto": {
+    "title": "加密钱包",
+    "addWallet": "添加钱包",
+    "editWallet": "编辑钱包",
+    "walletName": "钱包名称",
+    "address": "钱包地址",
+    "chain": "区块链",
+    "balance": "余额",
+    "usdValue": "美元价值",
+    "autoFetch": "自动同步",
+    "lastSync": "最后同步"
+  },
+  "exchanges": {
+    "title": "交易所账户",
+    "addAccount": "添加账户",
+    "editAccount": "编辑账户",
+    "exchange": "交易所",
+    "accountName": "账户名称",
+    "apiKey": "API Key",
+    "apiSecret": "API Secret",
+    "passphrase": "密码短语",
+    "autoFetch": "自动同步",
+    "totalValue": "总价值",
+    "lastSync": "最后同步"
+  },
+  "banks": {
+    "title": "银行账户",
+    "addAccount": "添加账户",
+    "editAccount": "编辑账户",
+    "bankName": "银行名称",
+    "accountName": "账户名",
+    "accountNumber": "账户号码",
+    "accountType": "账户类型",
+    "balance": "余额",
+    "types": {
+      "checking": "活期账户",
+      "savings": "储蓄账户",
+      "fixedDeposit": "定期存款",
+      "other": "其他"
+    }
+  },
+  "realEstate": {
+    "title": "房地产",
+    "addProperty": "添加房产",
+    "editProperty": "编辑房产",
+    "propertyName": "房产名称",
+    "location": "位置",
+    "purchasePrice": "购入价格",
+    "currentValue": "当前估值",
+    "purchaseDate": "购入日期"
+  },
+  "otherAssets": {
+    "title": "其他资产",
+    "addAsset": "添加资产",
+    "editAsset": "编辑资产",
+    "assetName": "资产名称",
+    "category": "分类",
+    "description": "描述",
+    "categories": {
+      "vehicle": "车辆",
+      "jewelry": "珠宝",
+      "art": "艺术品",
+      "stocks": "股票",
+      "other": "其他"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "language": "语言",
+    "defaultCurrency": "默认显示币种",
+    "apiKeys": "API 密钥",
+    "triggerSnapshot": "手动生成每日快照",
+    "dataExport": "导出数据",
+    "dataImport": "导入数据"
+  }
+}

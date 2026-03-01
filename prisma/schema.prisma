@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model CryptoWallet {
+  id         String    @id @default(cuid())
+  name       String
+  address    String
+  chain      String
+  balance    Float     @default(0)
+  usdValue   Float     @default(0)
+  autoFetch  Boolean   @default(false)
+  lastSyncAt DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model ExchangeAccount {
+  id         String    @id @default(cuid())
+  exchange   String
+  name       String
+  apiKey     String?
+  apiSecret  String?
+  passphrase String?
+  autoFetch  Boolean   @default(false)
+  totalUsd   Float     @default(0)
+  lastSyncAt DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  balances   ExchangeBalance[]
+}
+
+model ExchangeBalance {
+  id        String          @id @default(cuid())
+  accountId String
+  account   ExchangeAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  coin      String
+  amount    Float
+  usdValue  Float
+  updatedAt DateTime        @updatedAt
+
+  @@unique([accountId, coin])
+}
+
+model BankAccount {
+  id            String   @id @default(cuid())
+  bankName      String
+  accountName   String
+  accountNumber String
+  accountType   String
+  currency      String   @default("USD")
+  balance       Float    @default(0)
+  usdValue      Float    @default(0)
+  notes         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model RealEstate {
+  id            String   @id @default(cuid())
+  name          String
+  location      String
+  purchasePrice Float
+  currentValue  Float
+  currency      String   @default("USD")
+  usdValue      Float    @default(0)
+  purchaseDate  DateTime
+  notes         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model OtherAsset {
+  id          String   @id @default(cuid())
+  name        String
+  category    String
+  value       Float
+  currency    String   @default("USD")
+  usdValue    Float    @default(0)
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model DailySnapshot {
+  id              String   @id @default(cuid())
+  date            String   @unique
+  totalValue      Float
+  cryptoValue     Float
+  exchangeValue   Float
+  bankValue       Float
+  realEstateValue Float
+  otherValue      Float
+  exchangeRates   String?
+  details         String?
+  createdAt       DateTime @default(now())
+}
+
+model ExchangeRate {
+  id        String   @id @default(cuid())
+  base      String   @default("USD")
+  currency  String   @unique
+  rate      Float
+  updatedAt DateTime @updatedAt
+}
