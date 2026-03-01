@@ -25,7 +25,8 @@
     "banks": "Bank Accounts",
     "realEstate": "Real Estate",
     "otherAssets": "Other Assets",
-    "settings": "Settings"
+    "settings": "Settings",
+    "more": "More"
   },
   "dashboard": {
     "title": "Asset Dashboard",

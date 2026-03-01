@@ -1,21 +1,10 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Sidebar } from "@/components/layout/sidebar";
 import { Header } from "@/components/layout/header";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { CurrencyProvider } from "@/hooks/use-currency";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default async function LocaleLayout({
   children,
@@ -33,7 +22,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <CurrencyProvider>
             <div className="flex min-h-screen">

@@ -25,7 +25,8 @@
     "banks": "银行账户",
     "realEstate": "房地产",
     "otherAssets": "其他资产",
-    "settings": "设置"
+    "settings": "设置",
+    "more": "更多"
   },
   "dashboard": {
     "title": "资产仪表盘",

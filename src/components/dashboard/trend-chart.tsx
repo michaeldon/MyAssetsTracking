@@ -71,8 +71,8 @@ export function TrendChart({ snapshots, onPeriodChange }: TrendChartProps) {
               <XAxis dataKey="date" tick={{ fontSize: 12 }} className="text-muted-foreground" />
               <YAxis tick={{ fontSize: 12 }} className="text-muted-foreground" />
               <Tooltip
-                formatter={(value: number) => [
-                  `${symbol}${value.toLocaleString("en-US", { minimumFractionDigits: 2 })}`,
+                formatter={(value: number | undefined) => [
+                  `${symbol}${(value ?? 0).toLocaleString("en-US", { minimumFractionDigits: 2 })}`,
                   "Total",
                 ]}
               />

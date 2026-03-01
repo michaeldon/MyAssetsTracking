@@ -64,7 +64,7 @@ export function CategoryBreakdown({ breakdown }: CategoryBreakdownProps) {
               ))}
             </Pie>
             <Tooltip
-              formatter={(value: number) => formatValue(value)}
+              formatter={(value: number | undefined) => formatValue(value ?? 0)}
             />
             <Legend />
           </PieChart>
